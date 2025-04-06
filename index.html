@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyjo Score Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Skyjo Score Tracker</h1>
+
+        <div id="playerSetup">
+            <h2>Setup Players</h2>
+            <div id="playerInputsContainer">
+                <div>
+                    <label for="player1">Player 1 Name:</label>
+                    <input type="text" id="player1" name="playerName[]" required>
+                </div>
+                <div>
+                    <label for="player2">Player 2 Name:</label>
+                    <input type="text" id="player2" name="playerName[]" required>
+                </div>
+            </div>
+            <button type="button" id="addPlayerBtn" class="secondary-button">Add Another Player</button>
+            <button type="button" id="startGameBtn">Start Game</button>
+            <p id="setupError" class="error-message hidden"></p>
+        </div>
+
+        <div id="gameArea" class="hidden">
+
+            <h2>Score Board</h2>
+            <div class="table-container">
+                <table id="scoreTable">
+                    <thead>
+                        <tr id="tableHeaderRow">
+                            </tr>
+                    </thead>
+                    <tbody id="scoreTableBody">
+                        </tbody>
+                    </table>
+            </div>
+
+            <button id="addRoundBtn" class="addRoundBtn">Add Round Scores</button>
+
+            <div id="standings">
+                <h3>Current Standings</h3>
+                <div id="standingsList">
+                    </div>
+            </div>
+
+             <div id="gameOverMessage" class="hidden"></div>
+        </div>
+
+    </div> <div id="scoreModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModalBtn">&times;</span>
+            <h2 id="modalTitle">Enter Round Scores</h2>
+            <form id="scoreForm">
+                <div id="scoreInputs">
+                    </div>
+                <div id="revealerSelectContainer">
+                    <label for="revealerSelect">Who revealed all cards?</label>
+                    <select id="revealerSelect" required>
+                         </select>
+                </div>
+                 <p id="modalError" class="error-message hidden"></p>
+                <button type="submit" id="submitScoresBtn">Submit Scores</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>John Nettleton | 2025</p>
+    </footer>
+</body>
+</html>
